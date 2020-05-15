@@ -33,8 +33,12 @@ get('/homepage/:id') do
   erb(:definitions)
 end
 
-# delete('/albums/:id') do
-#   @album = Album.find(params[:id].to_i())
-#   @album.delete()
-#   redirect to('/albums')
-# end
+post('/homepage/:id/definitions') do
+  @word = Word.find(params[:id].to_i())
+  definition = Definition.new(params[:word_def], @word.id, nil)
+  definition.save()
+  erb(:definitions)
+end
+
+# Need to add routes for updating and deleting definitions, and test paths.
+
