@@ -59,14 +59,14 @@ describe '#Definitions' do
     end
   end
 
-  # describe('#update') do
-  #   it("updates an song by id") do
-  #     song = Song.new("Naima", @album.id, nil)
-  #     song.save()
-  #     song.update("Mr. P.C.", @album.id)
-  #     expect(song.name).to(eq("Mr. P.C."))
-  #   end
-  # end
+  describe('#update') do
+    it("updates an def by id") do
+      definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
+      definition1.update("Be lazy.", @word.id)
+      expect(definition1.meaning).to(eq("Be lazy."))
+    end
+  end
 
   # describe('#delete') do
   #   it("deletes an song by id") do

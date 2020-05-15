@@ -27,11 +27,11 @@ class Definition
     @@definitions[id]
   end
 
-  def update(meaning, word_id)
-    self.meaning = meaning
-    self.album_id = album_id
-    @@definitions[self.id] = Definition.new(self.meaning, self.album_id, self.id)
-  end
+  # def update(meaning, word_id)
+  #   self.meaning = meaning
+  #   self.album_id = album_id
+  #   @@definitions[self.id] = Definition.new(self.meaning, self.album_id, self.id)
+  # end
 
   def delete
     @@definitions.delete(self.id)
