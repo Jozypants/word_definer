@@ -2,7 +2,7 @@ require 'pry'
 
 class Definition
   attr_reader :id
-  attr_accessor :definition :word_id
+  attr_accessor :definition, :word_id
 
   @@definitions = {}
   @@total_rows = 0
@@ -39,9 +39,9 @@ class Definition
   #   @@definitions.delete(self.id)
   # end
   
-  # def self.clear
-  #   @@definitions = {}
-  # end
+  def self.clear
+    @@definitions = {}
+  end
 
   # def self.find_by_word(word_id)
   #   definitions = []
