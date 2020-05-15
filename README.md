@@ -22,12 +22,12 @@ _This application will let children  write up a list of words they don't know (b
 
 |   Behavior Description        |
 |-------------------------------|
-| 1.  []|
-| 2.  []|
-| 3.  []|
-| 4.  []|
-| 5.  []|
-| 6.  []|
+| 1. Get a list of all words. []|
+| 2. Look at the definition page for a single word. []|
+| 3. Add a new word to the list of words. []|
+| 4. Update a word's definition. []|
+| 5. Add multiple defitions. []|
+| 6. Delete a word's definition from the list.  []|
 | 7.  []|
 
 
@@ -37,7 +37,7 @@ _No known bugs at this time_
 
 ## Support and contact details
 
-_If you have any questions or any issues please feel free to submit an issue here: https://github.com/username/reponame/issues_
+_If you have any questions or any issues please feel free to submit an issue here: https://github.com/Jozypants/word_definer/issues_
 
 ## Technologies Used
 
