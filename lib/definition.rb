@@ -23,9 +23,9 @@ class Definition
     @@definitions[self.id] = Definition.new(self.meaning, self.word_id, self.id)
   end
 
-  # def self.find(id)
-  #   @@definitions[id]
-  # end
+  def self.find(id)
+    @@definitions[id]
+  end
 
   def update(meaning, word_id)
     self.meaning = meaning
