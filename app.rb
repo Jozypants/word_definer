@@ -29,8 +29,7 @@ post('/homepage') do
 end
 
 get('/homepage/:id') do
-  @word = word.find(params[:id].to_i())
-  @words = Word.all
+  @word = Word.find(params[:id].to_i())
   erb(:definitions)
 end
 
