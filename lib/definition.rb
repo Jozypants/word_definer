@@ -1,3 +1,5 @@
+require 'pry'
+
 class Definition
   attr_reader :id
   attr_accessor :meaning, :word_id

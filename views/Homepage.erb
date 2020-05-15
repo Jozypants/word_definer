@@ -1,0 +1,15 @@
+<h1>What does it mean?!</h1>
+
+<h3>Click on or add a word to define it or see what other kiddos think it means too!</h3>
+
+<% if @words.any? %>
+  <ul>
+    <% @words.each do |word| %>
+      <li><%= word.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are currently no words to display.</p>
+<% end %>
+
+<a href="/homepage/new">Add a word!</a>

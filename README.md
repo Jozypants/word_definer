@@ -22,13 +22,13 @@ _This application will let children  write up a list of words they don't know (b
 
 |   Behavior Description        |
 |-------------------------------|
-| 1. Get a list of all words. []|
-| 2. Look at the definition page for a single word. []|
-| 3. Add a new word to the list of words. []|
+| 1. Add a new word to the list of words. [√]|
+| 2. Get a list of all words. [√]|
+| 3. Look at the definition page for a single word. []|
 | 4. Update a word's definition. []|
 | 5. Add multiple defitions. []|
 | 6. Delete a word's definition from the list.  []|
-| 7.  []|
+
 
 
 ## Known Bugs

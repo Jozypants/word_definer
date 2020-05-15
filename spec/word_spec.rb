@@ -28,6 +28,16 @@ describe '#Word' do
     end
   end
 
+  describe('.find') do
+    it("finds a word by id") do
+      word = Word.new("tenacious", nil)
+      word.save()
+      word2 = Word.new("thorough", nil)
+      word2.save() 
+      expect(Word.find(word.id)).to(eq(word))
+    end
+  end
+  
   describe('#definitions') do
     it("returns a word's definitions") do
       word = Word.new("Procrastinate", nil)
