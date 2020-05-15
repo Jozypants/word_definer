@@ -68,14 +68,14 @@ describe '#Definitions' do
     end
   end
 
-  # describe('#delete') do
-  #   it("deletes an song by id") do
-  #     song = Song.new("Giant Steps", @album.id, nil)
-  #     song.save()
-  #     song2 = Song.new("Naima", @album.id, nil)
-  #     song2.save()
-  #     song.delete()
-  #     expect(Song.all).to(eq([song2]))
-  #   end
-  # end
+  describe('#delete') do
+    it("deletes an def by id") do
+      definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
+      definition2 = Definition.new("to put something off", @word.id, nil)
+      definition2.save()
+      definition1.delete()
+      expect(Definition.all).to(eq([definition2]))
+    end
+  end
 end

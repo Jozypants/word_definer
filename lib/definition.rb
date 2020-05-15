@@ -29,8 +29,8 @@ class Definition
 
   def update(meaning, word_id)
     self.meaning = meaning
-    self.album_id = album_id
-    @@definitions[self.id] = Definition.new(self.meaning, self.album_id, self.id)
+    self.word_id = word_id
+    @@definitions[self.id] = Definition.new(self.meaning, self.word_id, self.id)
   end
 
   def delete
