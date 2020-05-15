@@ -1,16 +1,14 @@
 require('sinatra')
 require('sinatra/reloader')
-require('./lib/album')
-require('./lib/song')
+require('./lib/word')
+require('./lib/definition')
 require('pry')
 also_reload('lib/**/*.rb')
 
-
-# EXAMPLES FOR GET, POST, PATCH & DELETE
-# get('/') do
-#   @albums = Album.sort
-#   erb(:albums) #erb file name
-# end
+get('/') do
+  @word = Word.all
+  erb(:homepage) #erb file name
+end
 
 # post('/albums') do ## Adds album to list of albums, cannot access in URL bar
 #   name = params[:album_name]
