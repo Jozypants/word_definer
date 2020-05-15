@@ -5,9 +5,17 @@ require 'pry'
 
 describe '#Word' do
 
-  describe('') do
-    it() do
-      expec().to(eq())
+  before(:each) do
+    Word.clear()
+    @word = Word.new("tenacious")
+    @word.save()
+    @word2 = Word.new("thorough")
+    @word.save()
+  end
+
+  describe('#save') do
+    it("saves a word") do
+      expec(Word.all).to(eq([@word, @word2]))
     end
   end
 
