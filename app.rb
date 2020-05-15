@@ -7,20 +7,19 @@ also_reload('lib/**/*.rb')
 
 get('/') do
   @word = Word.all
-  erb(:homepage) #erb file name
+  erb(:homepage)
 end
 
-# post('/albums') do ## Adds album to list of albums, cannot access in URL bar
-#   name = params[:album_name]
-#   artist = params[:album_artist]
-#   year = params[:album_year]
-#   genre = params[:album_genre]
-#   song = params[:song_id]
-#   in_inventory = params[:in_inventory]
-#   album = Album.new(name, nil, artist, genre, year)
-#   album.save()
-#   redirect to('/albums')
-# end
+get('/homepage') do
+  @words =Word.all
+end
+
+post('/homepage') do ## Adds album to list of albums, cannot access in URL bar
+  word = params[:new_word]
+  word = Word.new(word, nil)
+  word.save()
+  erb(:homepage)
+end
 
 # patch('/albums/:id') do
 #   @album = Album.find(params[:id].to_i())
