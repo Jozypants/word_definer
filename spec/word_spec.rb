@@ -1,5 +1,5 @@
 require 'rspec'
-require 'definition'
+# require 'definition'
 require 'word'
 require 'pry'
 
@@ -7,23 +7,19 @@ describe '#Word' do
 
   before(:each) do
     Word.clear()
-    @word = Word.new("tenacious")
-    @word.save()
-    @word2 = Word.new("thorough")
-    @word.save()
   end
+
 
   describe('#save') do
     it("saves a word") do
-      expec(Word.all).to(eq([@word, @word2]))
+      word = Word.new("tenacious", nil)
+      word.save()
+      word2 = Word.new("thorough", nil)
+      word2.save()
+      expect(Word.all).to(eq([word, word2]))
     end
   end
 
-  #  describe('') do
-  #   it() do
-  #     expec().to(eq())
-  #   end
-  # end
 end
 
 

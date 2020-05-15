@@ -1,11 +1,13 @@
 require 'pry'
 
 class Word
-  attr_reader :name
+  attr_reader :name, :id
   @@words = {}
+  @@total_rows = 0
 
-  def initialize(name)
+  def initialize(name, id)
     @name = name
+    @id = id || @@total_rows +=1
   end
 
   def self.all
@@ -14,9 +16,11 @@ class Word
 
   def self.clear()
     @@words = {}
+    @@total_rows = 0
   end
 
-  def save
-    @@words = Word.new(self.name)
+   def save
+    @@words[self.id] = Word.new(self.name, self.id)
   end
+  
 end
