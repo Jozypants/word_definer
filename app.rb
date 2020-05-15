@@ -28,10 +28,10 @@ post('/homepage') do
   erb(:homepage)
 end
 
-patch('/homepage/:id') do
+get('/homepage/:id') do
   @word = word.find(params[:id].to_i())
   @words = Word.all
-  erb(:albums)
+  erb(:definitions)
 end
 
 # delete('/albums/:id') do
