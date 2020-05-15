@@ -41,13 +41,13 @@ describe '#Definitions' do
     end
   end
 
-  # describe('#save') do
-  #   it("saves a song") do
-  #     song = Song.new("Naima", @album.id, nil)
-  #     song.save()
-  #     expect(Song.all).to(eq([song]))
-  #   end
-  # end
+  describe('#save') do
+    it("saves a definition") do
+      definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
+      expect(Definition.all).to(eq([definition1]))
+    end
+  end
 
   # describe('.find') do
   #   it("finds a song by id") do
