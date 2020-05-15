@@ -86,7 +86,7 @@ describe '#Definitions' do
       definition1.save()
       definition2 = Definition.new("to put something off", word2.id, nil)
       definition2.save()
-      expect(Definition.find_by_album(word2.id)).to(eq([definition2]))
+      expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
     end
   end
 end
