@@ -1,7 +1,23 @@
 require 'rspec'
-require 'song'
-require 'album'
+require 'definition'
+require 'word'
 require 'pry'
+
+describe '#Word' do
+
+  describe('') do
+    it() do
+      expec().to(eq())
+    end
+  end
+
+  #  describe('') do
+  #   it() do
+  #     expec().to(eq())
+  #   end
+  # end
+end
+
 
 # EXAMPLES FOR TESTING 
 # describe '#Class' do
