@@ -20,26 +20,26 @@ describe '#Definitions' do
     end
   end
 
-  # describe('.all') do
-  #   it("returns a list of all songs") do
-  #     song = Song.new("Giant Steps", @album.id, nil)
-  #     song.save()
-  #     song2 = Song.new("Naima", @album.id, nil)
-  #     song2.save()
-  #     expect(Song.all).to(eq([song, song2]))
-  #   end
-  # end
+  describe('.all') do
+    it("returns a list of all defs") do
+      definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
+      definition2 = Definition.new("to put something off", @word.id, nil)
+      definition2.save()
+      expect(Definition.all).to(eq([definition1, definition2]))
+    end
+  end
 
-  # describe('.clear') do
-  #   it("clears all songs") do
-  #     song = Song.new("Giant Steps", @album.id, nil)
-  #     song.save()
-  #     song2 = Song.new("Naima", @album.id, nil)
-  #     song2.save()
-  #     Song.clear()
-  #     expect(Song.all).to(eq([]))
-  #   end
-  # end
+  describe('.clear') do
+    it("clears all definitions") do
+      definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
+      definition2 = Definition.new("to put something off", @word.id, nil)
+      definition2.save()
+      Definition.clear()
+      expect(Definition.all).to(eq([]))
+    end
+  end
 
   # describe('#save') do
   #   it("saves a song") do
