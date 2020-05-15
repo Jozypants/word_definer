@@ -26,5 +26,9 @@ class Word
   def ==(word_to_compare)
     self.name() == word_to_compare.name()
   end
+
+  def definitions
+    Definition.find_by_word(self.id)
+  end
   
 end
