@@ -10,7 +10,7 @@ class Definition
   def initialize (definition, id, word_id)
     @definition = definition
     @word_id = word_id
-    @id = id || @total_rows += 1
+    @id = id || @@total_rows += 1
   end
 
   def ==(definition_to_compare)
