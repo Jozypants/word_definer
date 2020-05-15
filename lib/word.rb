@@ -23,16 +23,16 @@ class Word
     @@words[self.id] = Word.new(self.name, self.id)
   end
 
-  def find(id)
-    @@words[id]
-  end
-
   def ==(word_to_compare)
     self.name() == word_to_compare.name()
   end
 
   def definitions
     Definition.find_by_word(self.id)
+  end
+
+  def self.find(id)
+    @@words[id]
   end
 
 end

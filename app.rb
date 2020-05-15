@@ -29,13 +29,8 @@ post('/homepage') do
 end
 
 patch('/homepage/:id') do
-  @word = Album.find(params[:id].to_i())
-  @albums = Album.all
-  if params[:buy]
-    @album.sold()
-  else  
-    @album.update(params[:name])
-  end
+  @word = word.find(params[:id].to_i())
+  @words = Word.all
   erb(:albums)
 end
 
