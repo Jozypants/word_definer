@@ -78,4 +78,15 @@ describe '#Definitions' do
       expect(Definition.all).to(eq([definition2]))
     end
   end
+  describe('.find_by_word') do
+    it("finds defs for an word") do
+      word2 = Word.new("Perpetuate", nil)
+      word2.save
+      definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
+      definition2 = Definition.new("to put something off", word2.id, nil)
+      definition2.save()
+      expect(Definition.find_by_album(word2.id)).to(eq([definition2]))
+    end
+  end
 end
