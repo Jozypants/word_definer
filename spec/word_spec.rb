@@ -20,20 +20,15 @@ describe '#Word' do
     end
   end
 
+  describe('#definitions') do
+    it("returns a word's definitions") do
+      word = Word.new("Procrastinate", nil)
+      word.save()
+      definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
+      definition2 = Definition.new("to put something off", @word.id, nil)
+      definition2.save()
+      expect(word.definitions).to(eq([definition1, definition2]))
+    end
+  end
 end
-
-
-# EXAMPLES FOR TESTING 
-# describe '#Class' do
-#   before(:each) do
-#     Class.clear()
-#     @class_variable = Class.new()
-#     @class_variable.save()
-#   end
-
-#   describe('method') do
-#     it("describe test here") do
-#       expect(method).to(eq(something))
-#     end
-#   end
-# end
