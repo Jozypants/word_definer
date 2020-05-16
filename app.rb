@@ -40,5 +40,26 @@ post('/homepage/:id/definitions') do
   erb(:definitions)
 end
 
+get('/homepage/:id/definitions/:def_id') do
+  @definition = Definition.find(params[:def_id].to_i())
+  erb(:update_def)
+end
+
+
+patch('/homepage/:id/definitions/:def_id') do
+  @word = Word.find(params[:id].to_i())
+  definition = Definition.find(params[:def_id].to_i())
+  definition.update(params[:new_def], @word.id)
+  erb(:definitions)
+end
+
+
+delete('/homepage/:id/definitions/:def_id') do
+  definition = Definition.find(params[:def_id].to_i())
+  definition.delete
+  @word = word.find(params[:id].to_i())
+  erb(:definitions)
+end
+
 # Need to add routes for updating and deleting definitions, and test paths.
 
