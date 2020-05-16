@@ -61,5 +61,5 @@ delete('/homepage/:id/definitions/:def_id') do
   erb(:definitions)
 end
 
-# Need to add routes for updating and deleting definitions, and test paths.
+
 
