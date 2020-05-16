@@ -14,7 +14,9 @@ end
 
 describe('create an definition path', {:type => :feature}) do
   it('creates definition and then adds it to the list') do
-    visit('/homepage/:id/definitions')
+    word = Word.new("procrastinate",nil)
+    word.save
+    visit("/homepage/#{word.id}")
     fill_in('word_def', :with => 'to delay')
     click_on('go!')
     expect(page).to have_content('to delay')
