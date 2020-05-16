@@ -1,3 +1,15 @@
 body {
   background-image: url("https://cdn.wallpapersafari.com/82/74/OvIAaz.jpg");
 }
+
+.box {
+  border-radius: 8px;
+  margin: 15px;
+  padding: 15px;
+  background-color: darksalmon;
+  font-family: monospace;
+}
+
+h1 {
+  text-align: center;
+}
