@@ -6,7 +6,7 @@ require('pry')
 also_reload('lib/**/*.rb')
 
 
-get('/') do
+get("/") do
   @words = Word.all
   erb(:homepage)
 end
