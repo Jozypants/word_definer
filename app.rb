@@ -30,6 +30,7 @@ end
 
 get('/homepage/:id') do
   @word = Word.find(params[:id].to_i())
+  @definitions = @word.definitions
   erb(:definitions)
 end
 
