@@ -1,5 +1,3 @@
-require 'pry'
-
 class Word
   attr_reader :name, :id
   @@words = {}
