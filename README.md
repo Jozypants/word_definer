@@ -10,7 +10,7 @@ _This application will let children  write up a list of words they don't know (b
 
 ## Setup/Installation Requirements
 
-* _View this Repository Here on Heroku: https://fathomless-hamlet-68963.herokuapp.com/
+* _View this Repository Here on Heroku: https://mighty-depths-95750.herokuapp.com/
 * _Clone Repository from GitHub :  https://github.com/Jozypants/word_definer.git_
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
 * _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app. 
