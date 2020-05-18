@@ -6,10 +6,10 @@ require('pry')
 also_reload('lib/**/*.rb')
 
 
-# get('/') do
-#   @words = Word.all
-#   erb(:homepage)
-# end
+get('/') do
+  @words = Word.all
+  erb(:homepage)
+end
 
 get('/homepage') do
   @words = Word.all
