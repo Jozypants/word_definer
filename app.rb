@@ -34,6 +34,26 @@ get('/homepage/:id') do
   erb(:definitions)
 end
 
+get('/homepage/:id/edit') do
+  @word = Word.find(params[:id].to_i())
+  erb(:update_word)
+end
+
+patch('/homepage/:id') do
+  @word = Word.find(params[:id].to_i())
+  @word.update(params[:name])
+  @words = Word.all
+  erb(:homepage)
+end
+
+delete('/homepage/:id') do
+  @word = Word.find(params[:id].to_i())
+  @word.delete
+  @words =Word.all
+  redirect to('/homepage')
+end
+
+
 post('/homepage/:id/definitions') do
   @word = Word.find(params[:id].to_i())
   definition = Definition.new(params[:word_def], @word.id, nil)
@@ -53,7 +73,6 @@ patch('/homepage/:id/definitions/:def_id') do
   definition.update(params[:new_def], @word.id)
   erb(:definitions)
 end
-
 
 delete('/homepage/:id/definitions/:def_id') do
   definition = Definition.find(params[:def_id].to_i())

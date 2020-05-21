@@ -94,7 +94,9 @@ describe '#Definitions' do
   describe('#word') do
     it("finds the word the definition belongs to") do
       definition1 = Definition.new("delay or postpone action", @word.id, nil)
+      definition1.save()
       expect(definition1.word()).to(eq(@word))
     end
   end
+  
 end
