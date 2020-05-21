@@ -1,6 +1,6 @@
 # _Word Finder_
 
-#### _A Friday Project application for Epicodus using Ruby, Gem & Pry. DATE_
+#### _A Friday Project application for Epicodus using Ruby, Gem & Pry. May, 2020_
 
 #### By _**Jozy Kinnaman**_
 
@@ -10,10 +10,10 @@ _This application will let children  write up a list of words they don't know (b
 
 ## Setup/Installation Requirements
 
-* _View this Repository Here on Heroku: https://hidden-castle-04749.herokuapp.com/homepage
+* _View this Repository Here on Heroku: https://hidden-castle-04749.herokuapp.com/homepage_
 * _Clone Repository from GitHub :  https://github.com/Jozypants/word_definer.git_
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
-* _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app. 
+* _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app._ 
 * _Before you initialize GIT, be sure to delete the already exisiting .git file by running this command in your terminal $rm -rf .git_
 * _Create your own repository and push new changes to GitHub_
 
@@ -27,7 +27,7 @@ _This application will let children  write up a list of words they don't know (b
 | 3. Look at the definition page for a single word. [√]|
 | 4. Add multiple definitions. [√]|
 | 5. Update a word's definition. [√]|
-| 6. Delete a word's definition from the list.  []|
+| 6. Delete a word's definition from the list.  [√]|
 
 
 
