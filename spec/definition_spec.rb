@@ -78,6 +78,7 @@ describe '#Definitions' do
       expect(Definition.all).to(eq([definition2]))
     end
   end
+  
   describe('.find_by_word') do
     it("finds defs for an word") do
       word2 = Word.new("Perpetuate", nil)

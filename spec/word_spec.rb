@@ -43,10 +43,30 @@ describe '#Word' do
       word = Word.new("Procrastinate", nil)
       word.save()
       definition1 = Definition.new("delay or postpone action", word.id, nil)
-      # definition1.save()
       definition2 = Definition.new("to put something off", word.id, nil)
       definition2.save()
       expect(word.definitions).to(eq([definition1, definition2]))
     end
   end
+
+    describe('#update') do
+    it("updates a word by id") do
+      word1 = Word.new("propose", nil)
+      word1.save()
+      word1.update("purpose")
+      expect(word1.name).to(eq("purpose"))
+    end
+  end
+
+  describe('#delete') do
+    it("deletes an word by id") do
+      word1 = Word.new("purpose", nil)
+      word1.save()
+      word2 = Word.new("to put something off", nil)
+      word2.save()
+      word1.delete()
+      expect(Word.all).to(eq([word2]))
+    end
+  end
+
 end

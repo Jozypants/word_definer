@@ -33,4 +33,14 @@ class Word
     @@words[id]
   end
 
+  def update(name, id)
+    self.meaning = meaning
+    self.word_id = word_id
+    @@definitions[self.id] = Definition.new(self.meaning, self.word_id, self.id)
+  end
+
+  def delete
+    @@words.delete(self.id)
+  end
+
 end
