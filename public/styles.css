@@ -5,10 +5,11 @@
   padding: 15px;
   background-color: darksalmon;
   font-family: monospace;
+  border: 2px black dashed;
 }
 
 body {
-  background-image: url("https://cdn.wallpapersafari.com/82/74/OvIAaz.jpg");
+  background-color: yellow;
 }
 
 h1 {
